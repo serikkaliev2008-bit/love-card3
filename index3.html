@@ -1,0 +1,119 @@
+<!DOCTYPE html>  
+<html lang="ru">  
+<head>  
+  <meta charset="UTF-8" />  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+  <title>Для тебя ❤️</title>  
+  <style>  
+   body {  
+    margin: 0;  
+    font-family: 'Georgia', serif;  
+    background-image: url(‘IELTS/IMG_1807.jpg');  
+    background-size: cover;  
+    background-position: center;  
+    background-repeat: no-repeat;  
+    color: #3a2a2a;  
+    height: 100vh;  
+    overflow: hidden;  
+}  
+    .screen {  
+      width: 100%;  
+      height: 100vh;  
+      display: none;  
+      flex-direction: column;  
+      justify-content: center;  
+      align-items: center;  
+      padding: 24px;  
+      box-sizing: border-box;  
+      text-align: center;  
+    }  
+    .screen.active {  
+      display: flex;  
+    }  
+    h1 {  
+      font-size: 28px;  
+      margin-bottom: 20px;  
+    }  
+    p {  
+      font-size: 18px;  
+      line-height: 1.6;  
+      max-width: 700px;  
+      white-space: pre-line;  
+    }  
+    button {  
+      margin-top: 30px;  
+      padding: 14px 28px;  
+      font-size: 16px;  
+      border: none;  
+      border-radius: 30px;  
+      background-color: #e75480;  
+      color: white;  
+      cursor: pointer;  
+    }  
+    button:active {  
+      transform: scale(0.97);  
+    }  
+    .hint {  
+      margin-top: 20px;  
+      font-size: 14px;  
+      opacity: 0.7;  
+    }  
+  </style>  
+</head>  
+<body>  
+  
+  <audio id="music" src="Korkemim_Kazybek_Kuraiysh.mp3" loop></audio>  
+  
+  <div class="screen active" id="screen1">  
+    <h1>❤️ Для тебя ❤️</h1>  
+    <button onclick="nextScreen()">Открыть открытку</button>  
+    <div class="hint">Нажми 💕</div>  
+  </div>  
+  
+  <div class="screen" id="screen2">  
+    <p>  
+Жааним менің ❤️  
+Поздравляю с нашим 5-ым месяцем!🥰🥰  
+Реально быстро прошли эти месяцы, как ты писала в своих письмах.  
+  
+С тобой я становлюсь всё более похожим на себя, и откровенно говоря, этой лучшая версия самого себя.  
+Я где-то недавно прочитал, что мужчина выбирает женщину, глубоко отражающую его собственную суть.  
+  
+Осы 5 айда личность ретінде енді қалыптасып келе жатқандаймын.  
+Я бесконечно благодарен тебе🙏.  
+  
+Я никогда не видел такую поддержку, заботу и конечно же любви❤️.  
+Ты очень приятная, очень прекрасная, очень яркая, очень дорога, очень умная и *не такая* девушка с красивыми глазками и милой улыбкой🤍  
+  
+Я очень-очень сильно люблю тебя❤️❤️❤️  
+  
+Пусть у тебя всегда всё будет отлично, чтобы у тебя всё получалось🫶  
+  
+Я не умею красиво говорить, так что как писал Э. Асадов:  
+  
+Ты хочешь знать кого я люблю?  
+Его не трудно отгадать  
+Будь внимательней читая  
+Я буду буквы выделять.  
+    </p>  
+    <button onclick="nextScreen()">Дальше 🤍</button>  
+  </div>  
+  
+  <div class="screen" id="screen3">  
+    <h1>Я люблю тебя ❤️</h1>  
+    <p>С нашим маленьким, но таким важным днём 🤍</p>  
+  </div>  
+  
+  <script>  
+    let current = 1;  
+    function nextScreen() {  
+      const music = document.getElementById('music');  
+      if (music.paused) music.play();  
+      document.getElementById('screen' + current).classList.remove('active');  
+      current++;  
+      document.getElementById('screen' + current).classList.add('active');  
+    }  
+  </script>  
+  
+</body>  
+</html>  
